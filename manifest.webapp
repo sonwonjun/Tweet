@@ -1,6 +1,5 @@
 {
   "version": "0.1",
-  "Content-Type: application/x-web-app-manifest+json"
   "name": "Area Tweet",
   "description": "Find tweets by for any location",
   "launch_path": "index.html",
