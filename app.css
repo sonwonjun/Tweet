@@ -1,0 +1,59 @@
+
+/* animations */
+@-moz-keyframes fadeIn {
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+    0%      { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+.fadeIn { 
+    -moz-animation-name: fadeIn;
+    -moz-animation-duration: 2s;
+    
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+    
+    opacity: 1 !important;
+}
+
+/* Custom CSS classes */
+.clear              { clear: both; }
+.hidden             { display: none; }
+.opaque             { opacity: 0; }
+
+
+/* Basic styling */
+#prevLocationsContainer { margin-top: 40px; }
+
+/* Customizing jQuery Styles */
+#tweetsList li.ui-li-divider, 
+#tweetsList li.ui-li-static         { font-weight: normal !important; }
+
+
+/* Tweet list */
+#tweetsList li {
+    
+}
+
+#tweetsList li .tweetImage {
+    float: left;
+    margin: 10px 10px 0 10px;
+}
+
+#tweetsList li .tweetContent {
+    float: left;
+    /* margin: 10px 0 0 0; */
+}
+
+#tweetsList li .tweetContent strong {
+    display: block;
+    padding-bottom: 5px;
+}
+
+/* Media Queries for device support */
+@media screen and (max-device-width: 480px) {
+    #prevLocationsContainer { margin-top: 10px; }
+}

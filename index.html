@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <title>Area Tweet</title>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="app.css" />
+</head>
+</html>
+<body>
+    
+    <!-- home pane -->
+    <div data-role="page" id="home">
+        
+        <div data-role="header">
+            <h1>Area Tweet</h1>
+        </div>
+        
+        <div data-role="content">
+            
+            <div class="ui-body ui-body-b">
+                <h2>Location Search</h2>
+                <form id="locationForm">
+                    <input type="search" name="location" id="locationInput" placeholder="Your Location" />
+                    <button type="submit" data-role="button" data-theme="b">Search</button>
+                </form>
+            </div>
+            
+            
+            <div id="prevLocationsContainer" class="opaque">
+                <h2>
+                    Previous Locations
+                    <a href="#" id="clearHistoryButton" data-role="button" data-icon="delete" data-iconpos="notext" data-theme="b" data-inline="true" style="top: 5px;">Clear History</a>
+                </h2>
+                <ul id="prevLocationsList" data-role="listview" data-inset="true" data-filter="true"></ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <!-- tweets pane -->
+    <div data-role="page" id="tweets">
+        
+        <div data-role="header">
+            <a href="#home" id="tweetsBackButton">Back</a>
+            
+            <h1><span id="tweetsHeadTerm"></span> Tweets</h1>
+        </div>
+        
+        <ul id="tweetsList" data-role="listview" data-inset="true"></ul>
+        
+    </div>
+    
+    
+    <!-- create an initial dialog in case of problems -->
+    <div data-role="dialog" id="errorDialog">
+        <div data-role="header" data-theme="f">
+            <h1>Error</h1>
+        </div>
+
+        <div data-role="content" data-theme="d">
+            <h2 class="error-title"></h2>
+            <p class="error-message"></p>
+            <a href="#" data-role="button" data-rel="back">Okay</a>
+        </div>
+    </div>
+    
+    
+    
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script src="app://myapp1004.gaiamobile.org/app.js"></script>
+    
+    <!-- custom scripting -->
+    <script src="app.js"></script>
+</body>
+</html>
